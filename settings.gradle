@@ -1,0 +1,8 @@
+rootProject.name = 'Skill-Portal'
+include 'api'
+include 'api-impl'
+include 'service'
+include 'entity'
+include 'common'
+include 'validator'
+

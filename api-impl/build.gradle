@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'com.skillPortal'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.springframework', name: 'spring-web', version: '6.0.4'
+    implementation project(':api')
+    implementation project(':entity')
+    implementation project(':service')
+}
+
+test {
+    useJUnitPlatform()
+}
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java', 'build/generated/openapi'
+        }
+    }
+}
